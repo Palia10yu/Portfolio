@@ -1,0 +1,178 @@
+/* =============================================================================
+   MDT312 Assignment 7: Square Game Styling
+   ตกแต่งให้สวยงาม สะอาดตา และ User-Friendly ตามเกณฑ์การให้คะแนน
+   ============================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background: linear-gradient(135deg, #d5f5f3 0%, #8cccc9 100%);
+    min-height: 100vh;
+    padding: 30px 15px;
+    color: #0a3b38;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+fieldset {
+    width: 100%;
+    max-width: 540px;
+    background: #ffffff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(13, 148, 136, 0.08);
+    padding: 20px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+legend {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #0f766e;
+    padding: 4px 16px;
+    background: #ccfbf1;
+    border-radius: 12px;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 70px;
+    padding: 8px 12px;
+    border: 2px solid #99f6e4;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    text-align: center;
+    outline: none;
+    color: #115e59;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #14b8a6;
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.2);
+}
+
+select {
+    padding: 8px 14px;
+    border: 2px solid #99f6e4;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: white;
+    color: #115e59;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+select:focus {
+    border-color: #14b8a6;
+}
+
+button#start {
+    padding: 8px 24px;
+    background: linear-gradient(135deg, #2dd4bf 0%, #0d9488 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(13, 148, 136, 0.25);
+    transition: all 0.2s ease;
+}
+
+button#start:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(13, 148, 136, 0.35);
+}
+
+button#start:active {
+    transform: translateY(0);
+}
+
+#timerClock {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: #115e59;
+    margin-left: auto;
+}
+
+#clock {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 46px;
+    height: 38px;
+    background: #f0fdfa;
+    color: #0d9488;
+    font-weight: 700;
+    font-size: 1.15rem;
+    border-radius: 10px;
+    border: 2px solid #99f6e4;
+    padding: 0 10px;
+}
+
+#container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#layer {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: #ffffff;
+    border: 4px solid #5eead4;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(13, 148, 136, 0.12);
+    overflow: hidden;
+}
+
+.square {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+    transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), filter 0.15s ease;
+}
+
+.square:hover {
+    transform: scale(1.25);
+    filter: brightness(1.05);
+    z-index: 10;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.maroon {
+    background-color: #e06c75;
+}
+
+.lightgreen {
+    background-color: #6ee7b7;
+}
+
+.magenta {
+    background-color: #e879f9;
+}
